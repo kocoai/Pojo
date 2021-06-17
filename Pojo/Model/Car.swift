@@ -18,6 +18,6 @@ struct Car: Decodable {
     if let equipments = equipments {
       words += equipments.joined(separator: " ")
     }
-    return words
+    return words.lowercased()
   }
 }

@@ -18,9 +18,13 @@ struct RemoteRepository: Repository {
     webService.fetch { result in
       switch result {
       case .success(let cars):
+        var searchResult = [Car]()
         cars.forEach { car in
-          print(car.keywords)
+          if car.keywords.contains(keywords) {
+            searchResult.append(car)
+          }
         }
+        completion?(.success(searchResult))
       case .failure( let error):
         print(error)
       }

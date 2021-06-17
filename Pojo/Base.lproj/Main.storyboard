@@ -32,14 +32,61 @@
                     <view key="view" contentMode="scaleToFill" id="QSH-uU-mUK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="HTz-2u-PAe">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="Nsn-Bf-1lc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="1Qb-Zx-2ol" id="pLW-Ah-q7a"/>
+                                    </connections>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CarCell" textLabel="fSy-RR-4lS" style="IBUITableViewCellStyleDefault" id="Q6R-1f-Par">
+                                        <rect key="frame" x="0.0" y="93.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q6R-1f-Par" id="MK3-Ty-Rxc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fSy-RR-4lS">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1Qb-Zx-2ol" id="1RT-4i-I8g"/>
+                                    <outlet property="delegate" destination="1Qb-Zx-2ol" id="RdB-Hg-gc6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Pzh-bm-YpY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HTz-2u-PAe" firstAttribute="leading" secondItem="Pzh-bm-YpY" secondAttribute="leading" id="774-9f-Fya"/>
+                            <constraint firstItem="HTz-2u-PAe" firstAttribute="trailing" secondItem="Pzh-bm-YpY" secondAttribute="trailing" id="g17-S9-Aco"/>
+                            <constraint firstItem="HTz-2u-PAe" firstAttribute="top" secondItem="Pzh-bm-YpY" secondAttribute="top" id="hur-lS-8kl"/>
+                            <constraint firstItem="HTz-2u-PAe" firstAttribute="bottom" secondItem="Pzh-bm-YpY" secondAttribute="bottom" id="to4-GP-I27"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass.circle" catalog="system" selectedImage="magnifyingglass.circle.fill" id="zul-mk-MyU"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Nsn-Bf-1lc" id="Lk0-nH-BKA"/>
+                        <outlet property="tableView" destination="HTz-2u-PAe" id="2EE-Yg-795"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iwy-CO-rVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-477" y="-381"/>
+            <point key="canvasLocation" x="-478.26086956521743" y="-381.02678571428572"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cTv-Zz-wDW">

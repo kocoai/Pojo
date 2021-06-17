@@ -19,6 +19,10 @@
 		9D4E1375267BCFAE00665A5B /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E1374267BCFAE00665A5B /* Car.swift */; };
 		9D4E1377267BD13E00665A5B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E1376267BD13E00665A5B /* WebService.swift */; };
 		9D4E1379267BD57600665A5B /* RemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E1378267BD57600665A5B /* RemoteRepository.swift */; };
+		9D4E137E267C9C0500665A5B /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E137D267C9C0500665A5B /* SearchInteractor.swift */; };
+		9D4E1380267C9EDC00665A5B /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E137F267C9EDC00665A5B /* SearchPresenter.swift */; };
+		9D4E1382267C9F2F00665A5B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E1381267C9F2F00665A5B /* SearchViewModel.swift */; };
+		9D4E1385267CAAF400665A5B /* UILabel+Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E1384267CAAF400665A5B /* UILabel+Highlight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		9D4E1374267BCFAE00665A5B /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		9D4E1376267BD13E00665A5B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		9D4E1378267BD57600665A5B /* RemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepository.swift; sourceTree = "<group>"; };
+		9D4E137D267C9C0500665A5B /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		9D4E137F267C9EDC00665A5B /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		9D4E1381267C9F2F00665A5B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		9D4E1384267CAAF400665A5B /* UILabel+Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Highlight.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,7 @@
 				9D4E137A267BDE1A00665A5B /* Scene */,
 				9D4E1373267BCFA100665A5B /* Model */,
 				9D4E136E267BCE5A00665A5B /* Repository */,
+				9D4E1383267CAADC00665A5B /* Utils */,
 				9D4E133C267BC73800665A5B /* AppDelegate.swift */,
 				9D4E1342267BC73800665A5B /* Main.storyboard */,
 				9D4E1345267BC73A00665A5B /* Assets.xcassets */,
@@ -186,6 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				9D4E1340267BC73800665A5B /* SearchViewController.swift */,
+				9D4E137D267C9C0500665A5B /* SearchInteractor.swift */,
+				9D4E137F267C9EDC00665A5B /* SearchPresenter.swift */,
+				9D4E1381267C9F2F00665A5B /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -196,6 +208,14 @@
 				9D4E136C267BCB9800665A5B /* AccountViewController.swift */,
 			);
 			path = MyAccount;
+			sourceTree = "<group>";
+		};
+		9D4E1383267CAADC00665A5B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9D4E1384267CAAF400665A5B /* UILabel+Highlight.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,8 +350,12 @@
 			files = (
 				9D4E1377267BD13E00665A5B /* WebService.swift in Sources */,
 				9D4E136D267BCB9800665A5B /* AccountViewController.swift in Sources */,
+				9D4E1380267C9EDC00665A5B /* SearchPresenter.swift in Sources */,
+				9D4E1385267CAAF400665A5B /* UILabel+Highlight.swift in Sources */,
+				9D4E137E267C9C0500665A5B /* SearchInteractor.swift in Sources */,
 				9D4E1341267BC73800665A5B /* SearchViewController.swift in Sources */,
 				9D4E1375267BCFAE00665A5B /* Car.swift in Sources */,
+				9D4E1382267C9F2F00665A5B /* SearchViewModel.swift in Sources */,
 				9D4E133D267BC73800665A5B /* AppDelegate.swift in Sources */,
 				9D4E1372267BCEAE00665A5B /* Repository.swift in Sources */,
 				9D4E1379267BD57600665A5B /* RemoteRepository.swift in Sources */,
