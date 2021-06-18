@@ -22,7 +22,7 @@ final class SearchViewController: UIViewController {
     interactor = SearchInteractor(prensenter: SearchPresenter(display: self))
   }
   
-  @objc func search() {
+  @objc private func search() {
     guard let searchText = searchBar.text?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased(), !searchText.isEmpty else {
       viewModel = SearchViewModel(cars: [], keywords: "")
       tableView.reloadData()
@@ -30,9 +30,16 @@ final class SearchViewController: UIViewController {
     }
     interactor.search(keywords: searchText)
   }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    guard segue.identifier == "ShowCar", let destination = segue.destination as? CarViewController, let row = tableView.indexPathForSelectedRow?.row else {
+      return
+    }
+    destination.viewModel = CarViewModel(car: viewModel.cars[row])
+  }
 }
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+extension SearchViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return viewModel.cars.count
   }
