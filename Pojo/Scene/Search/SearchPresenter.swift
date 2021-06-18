@@ -12,7 +12,7 @@ protocol SearchPresentationLogic {
 }
 
 struct SearchPresenter: SearchPresentationLogic {
-  let display: SearchDisplayLogic
+  private let display: SearchDisplayLogic
   
   init(display: SearchDisplayLogic) {
     self.display = display

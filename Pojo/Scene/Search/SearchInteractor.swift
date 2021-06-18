@@ -17,17 +17,32 @@ protocol SearchDataStore {
 
 final class SearchInteractor: SearchBusinessLogic, SearchDataStore {
   var data = [Car]()
-  let remoteRepo: RemoteRepository
-  let prensenter: SearchPresentationLogic
+  private let remote: Repository
+  private let local: Repository
+  private let prensenter: SearchPresentationLogic
   
-  init(prensenter: SearchPresentationLogic, remoteRepo: RemoteRepository = RemoteRepository()) {
+  init(prensenter: SearchPresentationLogic, remote: Repository = RemoteRepository(), local: Repository = LocalRepository()) {
     self.prensenter = prensenter
-    self.remoteRepo = remoteRepo
+    self.remote = remote
+    self.local = local
   }
   
   func search(keywords: String) {
-    remoteRepo.fetch(keywords: keywords) { [weak self] result in
+    remote.fetch(keywords: keywords) { [weak self] result in
       switch result{
+      case .success(let cars):
+        self?.data = cars
+        self?.prensenter.present(cars: cars, keywords: keywords)
+        self?.local.save(cars: cars)
+      case .failure(_):
+        self?.searchFromCache(keywords: keywords)
+      }
+    }
+  }
+  
+  private func searchFromCache(keywords: String) {
+    local.fetch(keywords: keywords) { [weak self] result in
+      switch result {
       case .success(let cars):
         self?.data = cars
         self?.prensenter.present(cars: cars, keywords: keywords)

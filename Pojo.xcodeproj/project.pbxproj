@@ -26,6 +26,9 @@
 		9D4E1389267CB0DE00665A5B /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E1388267CB0DE00665A5B /* CarViewController.swift */; };
 		9D4E138B267CB0FF00665A5B /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E138A267CB0FF00665A5B /* CarViewModel.swift */; };
 		9D4E138E267CE33000665A5B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4E138D267CE33000665A5B /* Kingfisher */; };
+		9D4E1391267CEEF100665A5B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4E1390267CEEF100665A5B /* Realm */; };
+		9D4E1393267CEEF100665A5B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4E1392267CEEF100665A5B /* RealmSwift */; };
+		9D4E1395267CEF2000665A5B /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E1394267CEF2000665A5B /* LocalRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,7 @@
 		9D4E1384267CAAF400665A5B /* UILabel+Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Highlight.swift"; sourceTree = "<group>"; };
 		9D4E1388267CB0DE00665A5B /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		9D4E138A267CB0FF00665A5B /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
+		9D4E1394267CEF2000665A5B /* LocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4E1393267CEEF100665A5B /* RealmSwift in Frameworks */,
+				9D4E1391267CEEF100665A5B /* Realm in Frameworks */,
 				9D4E138E267CE33000665A5B /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +173,7 @@
 		9D4E136F267BCE7300665A5B /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				9D4E1394267CEF2000665A5B /* LocalRepository.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -252,6 +259,8 @@
 			name = Pojo;
 			packageProductDependencies = (
 				9D4E138D267CE33000665A5B /* Kingfisher */,
+				9D4E1390267CEEF100665A5B /* Realm */,
+				9D4E1392267CEEF100665A5B /* RealmSwift */,
 			);
 			productName = Pojo;
 			productReference = 9D4E1339267BC73800665A5B /* Pojo.app */;
@@ -326,6 +335,7 @@
 			mainGroup = 9D4E1330267BC73800665A5B;
 			packageReferences = (
 				9D4E138C267CE33000665A5B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				9D4E138F267CEEF100665A5B /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 9D4E133A267BC73800665A5B /* Products */;
 			projectDirPath = "";
@@ -379,6 +389,7 @@
 				9D4E138B267CB0FF00665A5B /* CarViewModel.swift in Sources */,
 				9D4E1375267BCFAE00665A5B /* Car.swift in Sources */,
 				9D4E1389267CB0DE00665A5B /* CarViewController.swift in Sources */,
+				9D4E1395267CEF2000665A5B /* LocalRepository.swift in Sources */,
 				9D4E1382267C9F2F00665A5B /* SearchViewModel.swift in Sources */,
 				9D4E133D267BC73800665A5B /* AppDelegate.swift in Sources */,
 				9D4E1372267BCEAE00665A5B /* Repository.swift in Sources */,
@@ -725,6 +736,14 @@
 				minimumVersion = 6.3.0;
 			};
 		};
+		9D4E138F267CEEF100665A5B /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -732,6 +751,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9D4E138C267CE33000665A5B /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		9D4E1390267CEEF100665A5B /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D4E138F267CEEF100665A5B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		9D4E1392267CEEF100665A5B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D4E138F267CEEF100665A5B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

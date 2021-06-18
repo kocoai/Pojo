@@ -14,6 +14,8 @@ struct CarViewModel {
   var subtitle: String { "\(car.year)" }
   var title: String { car.make + " " + car.model }
   var body: String {
-    return car.equipments?.joined(separator: ", ") ?? ""
+    var string = ""
+    car.equipments?.forEach { string += "✪ \($0)\n" }
+    return string
   }
 }

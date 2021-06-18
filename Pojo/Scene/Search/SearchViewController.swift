@@ -32,7 +32,7 @@ final class SearchViewController: UIViewController {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    guard segue.identifier == "ShowCar", let destination = segue.destination as? CarViewController, let row = tableView.indexPathForSelectedRow?.row else {
+    guard let destination = segue.destination as? CarViewController, let row = tableView.indexPathForSelectedRow?.row else {
       return
     }
     destination.viewModel = CarViewModel(car: viewModel.cars[row])

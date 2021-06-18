@@ -15,11 +15,12 @@ final class CarViewController: UIViewController {
   @IBOutlet var bodyLabel: UILabel!
   var viewModel: CarViewModel?
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     subtitleLabel.text = viewModel?.subtitle
     titleLabel.text = viewModel?.title
     bodyLabel.text = viewModel?.body
-    imageView.kf.setImage(with: viewModel?.imageURL)
+    imageView.kf.setImage(with: viewModel?.imageURL, placeholder: UIImage(systemName: "car"))
   }
 }
+

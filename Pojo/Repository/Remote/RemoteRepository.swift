@@ -30,4 +30,6 @@ struct RemoteRepository: Repository {
       }
     }
   }
+  
+  func save(cars: [Car]) {}
 }

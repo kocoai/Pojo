@@ -17,7 +17,7 @@ struct WebService {
         return
       }
       guard let data = data,
-            let cars = try? JSONDecoder().decode([Car].self, from: data) else {
+            let cars = try? JSONDecoder().decode([Free2MoveCar].self, from: data) else {
         completion?(.failure(PojoError.fetchRemoteFailure))
         return
       }

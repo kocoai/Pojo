@@ -11,4 +11,5 @@ typealias CarCompletion = (Result<[Car], Error>) -> Void
 
 protocol Repository {
   func fetch(keywords: String, completion: CarCompletion?)
+  func save(cars: [Car])
 }
