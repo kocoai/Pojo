@@ -18,7 +18,7 @@ extension UILabel {
     let attributedText = NSMutableAttributedString(string: value)
     let range = (value as NSString).range(of: highlight, options: .caseInsensitive)
     let strokeTextAttributes: [NSAttributedString.Key: Any] = [
-      .backgroundColor: UIColor.yellow,
+      .backgroundColor: UIColor.systemYellow,
       .foregroundColor: UIColor.black
     ]
     attributedText.addAttributes(strokeTextAttributes, range: range)
