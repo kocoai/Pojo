@@ -11,7 +11,7 @@ protocol AccountPresentationLogic {
   func present(user: User)
 }
 
-struct AccountPresenter: AccountPresentationLogic {
+final class AccountPresenter: AccountPresentationLogic {
   private weak var display: AccountDisplayLogic?
   
   init(display: AccountDisplayLogic) {

@@ -16,10 +16,13 @@ final class SearchViewController: UIViewController {
   @IBOutlet private var searchBar: UISearchBar!
   private var viewModel = SearchViewModel(cars: [], keywords: "")
   private var interactor: SearchBusinessLogic!
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    interactor = SearchInteractor(prensenter: SearchPresenter(display: self))
+  private var dataStore: SearchDataStore?
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    let i = SearchInteractor(prensenter: SearchPresenter(display: self))
+    interactor = i
+    dataStore = i
   }
   
   @objc private func search() {
@@ -33,7 +36,7 @@ final class SearchViewController: UIViewController {
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard let destination = segue.destination as? CarViewController, let row = tableView.indexPathForSelectedRow?.row else { return }
-    destination.viewModel = CarViewModel(car: viewModel.cars[row])
+    destination.dataStore?.car = dataStore?.cars[row]
   }
 }
 

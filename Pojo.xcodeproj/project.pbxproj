@@ -36,6 +36,8 @@
 		9D965B8F267F97DA00B73DAE /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B8E267F97DA00B73DAE /* UIImage+Resize.swift */; };
 		9D965B91267FB15300B73DAE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B90267FB15300B73DAE /* User.swift */; };
 		9D965B95267FC17500B73DAE /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B94267FC17500B73DAE /* UIView+Utils.swift */; };
+		9D965B97267FCBA300B73DAE /* CarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B96267FCBA300B73DAE /* CarInteractor.swift */; };
+		9D965B99267FCC7E00B73DAE /* CarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B98267FCC7E00B73DAE /* CarPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		9D965B8E267F97DA00B73DAE /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		9D965B90267FB15300B73DAE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9D965B94267FC17500B73DAE /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
+		9D965B96267FCBA300B73DAE /* CarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInteractor.swift; sourceTree = "<group>"; };
+		9D965B98267FCC7E00B73DAE /* CarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				9D4E1388267CB0DE00665A5B /* CarViewController.swift */,
+				9D965B96267FCBA300B73DAE /* CarInteractor.swift */,
+				9D965B98267FCC7E00B73DAE /* CarPresenter.swift */,
 				9D4E138A267CB0FF00665A5B /* CarViewModel.swift */,
 			);
 			path = Car;
@@ -402,10 +408,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D4E1377267BD13E00665A5B /* WebService.swift in Sources */,
+				9D965B99267FCC7E00B73DAE /* CarPresenter.swift in Sources */,
 				9D4E136D267BCB9800665A5B /* AccountViewController.swift in Sources */,
 				9D4E1380267C9EDC00665A5B /* SearchPresenter.swift in Sources */,
 				9D4E1385267CAAF400665A5B /* UILabel+Highlight.swift in Sources */,
 				9D965B8D267F8E4700B73DAE /* AccountPresenter.swift in Sources */,
+				9D965B97267FCBA300B73DAE /* CarInteractor.swift in Sources */,
 				9D4E137E267C9C0500665A5B /* SearchInteractor.swift in Sources */,
 				9D4E1341267BC73800665A5B /* SearchViewController.swift in Sources */,
 				9D4E138B267CB0FF00665A5B /* CarViewModel.swift in Sources */,

@@ -17,13 +17,19 @@ final class CarViewController: UIViewController {
   @IBOutlet var subtitleLabel: UILabel!
   @IBOutlet var titleLabel: UILabel!
   @IBOutlet var bodyLabel: UILabel!
-  var viewModel: CarViewModel?
+  var interactor: CarBusinessLogic!
+  var dataStore: CarDataStore?
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    if let viewModel = viewModel {
-      display(viewModel: viewModel)
-    }
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    let i = CarInteractor(presenter: CarPresenter(display: self))
+    interactor = i
+    dataStore = i
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    interactor.load()
   }
 }
 

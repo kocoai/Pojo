@@ -11,6 +11,7 @@ protocol AccountBusinessLogic {
   func load()
   func save(user: User)
 }
+
 struct AccountInteractor: AccountBusinessLogic {
   private let presenter: AccountPresentationLogic
   

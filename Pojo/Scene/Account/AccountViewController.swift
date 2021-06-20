@@ -35,10 +35,15 @@ final class AccountViewController: UIViewController {
     }
   }
   
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    interactor = AccountInteractor(presenter: AccountPresenter(display: self))
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    interactor = AccountInteractor(presenter: AccountPresenter(display: self))
     setupKeyboard()
+    setupBirthDatePicker()
     interactor.load()
   }
   
@@ -60,12 +65,33 @@ final class AccountViewController: UIViewController {
   }
   
   @IBAction func photoTapAction(_ sender: Any) {
-    let imagePickerController = UIImagePickerController()
-    imagePickerController.delegate = self
-    imagePickerController.allowsEditing = false
-    imagePickerController.mediaTypes = ["public.image"]
-    imagePickerController.sourceType = .photoLibrary
-    present(imagePickerController, animated: true)
+    let picker = UIImagePickerController()
+    picker.delegate = self
+    picker.allowsEditing = false
+    picker.mediaTypes = ["public.image"]
+    
+    let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+    alert.addAction(UIAlertAction(title: "Caméra", style: .default, handler: {
+      action in
+      picker.sourceType = .camera
+      self.present(picker, animated: true, completion: nil)
+    }))
+    alert.addAction(UIAlertAction(title: "Bibliothèque", style: .default, handler: {
+      action in
+      picker.sourceType = .photoLibrary
+      self.present(picker, animated: true, completion: nil)
+    }))
+    alert.addAction(UIAlertAction(title: "Annuler", style: .cancel, handler: nil))
+    self.present(alert, animated: true, completion: nil)
+  }
+  
+  private func setupBirthDatePicker() {
+    let calendar = Calendar(identifier: .gregorian)
+    var dateComponent = DateComponents()
+    dateComponent.year = -18
+    birthDatePicker.maximumDate = calendar.date(byAdding: dateComponent, to: Date())
+    dateComponent.year = -100
+    birthDatePicker.minimumDate = calendar.date(byAdding: dateComponent, to: Date())
   }
 }
 
@@ -75,7 +101,7 @@ extension AccountViewController: UIImagePickerControllerDelegate & UINavigationC
     if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
       photoImageView.image = pickedImage
         .squareCrop()
-        .scalePreservingAspectRatio(targetSize: CGSize(width: photoImageView.frame.width, height: photoImageView.frame.width))
+        .scale(CGSize(width: photoImageView.frame.width, height: photoImageView.frame.width))
     }
     dismiss(animated: true, completion: nil)
   }
@@ -104,7 +130,7 @@ extension AccountViewController: AccountDisplayLogic {
   }
 }
 
-// MARK: - Setup keyboard
+// MARK: - Keyboard
 extension AccountViewController {
   @objc private func adjustForKeyboard(notification: Notification) {
     guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }

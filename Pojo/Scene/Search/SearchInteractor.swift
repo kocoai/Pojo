@@ -12,11 +12,11 @@ protocol SearchBusinessLogic {
 }
 
 protocol SearchDataStore {
-  var data: [Car] { get  }
+  var cars: [Car] { get }
 }
 
 final class SearchInteractor: SearchBusinessLogic, SearchDataStore {
-  var data = [Car]()
+  var cars = [Car]()
   private let remote: Repository
   private let local: Repository
   private let prensenter: SearchPresentationLogic
@@ -31,7 +31,7 @@ final class SearchInteractor: SearchBusinessLogic, SearchDataStore {
     remote.fetch(keywords: keywords) { [weak self] result in
       switch result{
       case .success(let cars):
-        self?.data = cars
+        self?.cars = cars
         self?.prensenter.present(cars: cars, keywords: keywords)
         self?.local.save(cars: cars)
       case .failure(_):
@@ -44,10 +44,10 @@ final class SearchInteractor: SearchBusinessLogic, SearchDataStore {
     local.fetch(keywords: keywords) { [weak self] result in
       switch result {
       case .success(let cars):
-        self?.data = cars
+        self?.cars = cars
         self?.prensenter.present(cars: cars, keywords: keywords)
       case .failure(_):
-        self?.data = []
+        self?.cars = []
         self?.prensenter.present(cars: [], keywords: keywords)
       }
     }
