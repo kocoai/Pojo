@@ -11,8 +11,8 @@ protocol SearchPresentationLogic {
   func present(cars: [Car], keywords: String)
 }
 
-struct SearchPresenter: SearchPresentationLogic {
-  private let display: SearchDisplayLogic
+final class SearchPresenter: SearchPresentationLogic {
+  private weak var display: SearchDisplayLogic?
   
   init(display: SearchDisplayLogic) {
     self.display = display
@@ -21,7 +21,7 @@ struct SearchPresenter: SearchPresentationLogic {
   func present(cars: [Car], keywords: String) {
     let viewModel = SearchViewModel(cars: cars, keywords: keywords)
     DispatchQueue.main.async {
-      display.display(viewModel: viewModel)
+      self.display?.display(viewModel: viewModel)
     }
   }
   

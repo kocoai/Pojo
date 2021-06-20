@@ -8,6 +8,15 @@
 import Foundation
 import RealmSwift
 
+protocol Car {
+  var make: String { get }
+  var model: String { get }
+  var year: Int { get }
+  var picture: String { get }
+  var equipments: [String]? { get }
+  var keywords: String { get }
+}
+
 struct Free2MoveCar: Decodable, Car {
   let make: String
   let model: String
@@ -23,15 +32,6 @@ struct Free2MoveCar: Decodable, Car {
   }
 }
 
-protocol Car {
-  var make: String { get }
-  var model: String { get }
-  var year: Int { get }
-  var picture: String { get }
-  var equipments: [String]? { get }
-  var keywords: String { get }
-}
-
 final class CarObject: Object, Car {
   @objc dynamic var make = ""
   @objc dynamic var model = ""
@@ -40,6 +40,7 @@ final class CarObject: Object, Car {
   @objc dynamic var keywords = ""
   var equipments: [String]? { equipments_.sorted() }
   private let equipments_ = List<String>()
+  
   override static func primaryKey() -> String? {
     return "keywords"
   }

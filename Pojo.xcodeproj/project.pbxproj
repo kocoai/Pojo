@@ -29,6 +29,13 @@
 		9D4E1391267CEEF100665A5B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4E1390267CEEF100665A5B /* Realm */; };
 		9D4E1393267CEEF100665A5B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4E1392267CEEF100665A5B /* RealmSwift */; };
 		9D4E1395267CEF2000665A5B /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E1394267CEF2000665A5B /* LocalRepository.swift */; };
+		9D4E1397267F7C8000665A5B /* AccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E1396267F7C8000665A5B /* AccountInteractor.swift */; };
+		9D4E1399267F7D5400665A5B /* UserDefaults+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E1398267F7D5400665A5B /* UserDefaults+Settings.swift */; };
+		9D965B8B267F8CC500B73DAE /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B8A267F8CC500B73DAE /* AccountViewModel.swift */; };
+		9D965B8D267F8E4700B73DAE /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B8C267F8E4700B73DAE /* AccountPresenter.swift */; };
+		9D965B8F267F97DA00B73DAE /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B8E267F97DA00B73DAE /* UIImage+Resize.swift */; };
+		9D965B91267FB15300B73DAE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B90267FB15300B73DAE /* User.swift */; };
+		9D965B95267FC17500B73DAE /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B94267FC17500B73DAE /* UIView+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +81,13 @@
 		9D4E1388267CB0DE00665A5B /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		9D4E138A267CB0FF00665A5B /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
 		9D4E1394267CEF2000665A5B /* LocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepository.swift; sourceTree = "<group>"; };
+		9D4E1396267F7C8000665A5B /* AccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInteractor.swift; sourceTree = "<group>"; };
+		9D4E1398267F7D5400665A5B /* UserDefaults+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Settings.swift"; sourceTree = "<group>"; };
+		9D965B8A267F8CC500B73DAE /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		9D965B8C267F8E4700B73DAE /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
+		9D965B8E267F97DA00B73DAE /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		9D965B90267FB15300B73DAE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9D965B94267FC17500B73DAE /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				9D4E1374267BCFAE00665A5B /* Car.swift */,
+				9D965B90267FB15300B73DAE /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,9 +213,9 @@
 		9D4E137A267BDE1A00665A5B /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				9D4E1387267CB03E00665A5B /* Car */,
-				9D4E137C267BDF6500665A5B /* MyAccount */,
 				9D4E137B267BDF5E00665A5B /* Search */,
+				9D4E1387267CB03E00665A5B /* Car */,
+				9D4E137C267BDF6500665A5B /* Account */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -216,18 +231,24 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		9D4E137C267BDF6500665A5B /* MyAccount */ = {
+		9D4E137C267BDF6500665A5B /* Account */ = {
 			isa = PBXGroup;
 			children = (
 				9D4E136C267BCB9800665A5B /* AccountViewController.swift */,
+				9D4E1396267F7C8000665A5B /* AccountInteractor.swift */,
+				9D965B8C267F8E4700B73DAE /* AccountPresenter.swift */,
+				9D965B8A267F8CC500B73DAE /* AccountViewModel.swift */,
 			);
-			path = MyAccount;
+			path = Account;
 			sourceTree = "<group>";
 		};
 		9D4E1383267CAADC00665A5B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				9D4E1384267CAAF400665A5B /* UILabel+Highlight.swift */,
+				9D4E1398267F7D5400665A5B /* UserDefaults+Settings.swift */,
+				9D965B8E267F97DA00B73DAE /* UIImage+Resize.swift */,
+				9D965B94267FC17500B73DAE /* UIView+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -384,15 +405,22 @@
 				9D4E136D267BCB9800665A5B /* AccountViewController.swift in Sources */,
 				9D4E1380267C9EDC00665A5B /* SearchPresenter.swift in Sources */,
 				9D4E1385267CAAF400665A5B /* UILabel+Highlight.swift in Sources */,
+				9D965B8D267F8E4700B73DAE /* AccountPresenter.swift in Sources */,
 				9D4E137E267C9C0500665A5B /* SearchInteractor.swift in Sources */,
 				9D4E1341267BC73800665A5B /* SearchViewController.swift in Sources */,
 				9D4E138B267CB0FF00665A5B /* CarViewModel.swift in Sources */,
+				9D965B91267FB15300B73DAE /* User.swift in Sources */,
 				9D4E1375267BCFAE00665A5B /* Car.swift in Sources */,
+				9D4E1397267F7C8000665A5B /* AccountInteractor.swift in Sources */,
+				9D4E1399267F7D5400665A5B /* UserDefaults+Settings.swift in Sources */,
 				9D4E1389267CB0DE00665A5B /* CarViewController.swift in Sources */,
 				9D4E1395267CEF2000665A5B /* LocalRepository.swift in Sources */,
 				9D4E1382267C9F2F00665A5B /* SearchViewModel.swift in Sources */,
+				9D965B8F267F97DA00B73DAE /* UIImage+Resize.swift in Sources */,
 				9D4E133D267BC73800665A5B /* AppDelegate.swift in Sources */,
 				9D4E1372267BCEAE00665A5B /* Repository.swift in Sources */,
+				9D965B95267FC17500B73DAE /* UIView+Utils.swift in Sources */,
+				9D965B8B267F8CC500B73DAE /* AccountViewModel.swift in Sources */,
 				9D4E1379267BD57600665A5B /* RemoteRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,7 +604,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = awesome.app.Pojo;
+				PRODUCT_BUNDLE_IDENTIFIER = kyen.Pojo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -595,7 +623,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = awesome.app.Pojo;
+				PRODUCT_BUNDLE_IDENTIFIER = kyen.Pojo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

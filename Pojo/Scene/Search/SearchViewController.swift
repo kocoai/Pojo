@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SearchDisplayLogic {
+protocol SearchDisplayLogic: AnyObject {
   func display(viewModel: SearchViewModel)
 }
 
@@ -32,9 +32,7 @@ final class SearchViewController: UIViewController {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    guard let destination = segue.destination as? CarViewController, let row = tableView.indexPathForSelectedRow?.row else {
-      return
-    }
+    guard let destination = segue.destination as? CarViewController, let row = tableView.indexPathForSelectedRow?.row else { return }
     destination.viewModel = CarViewModel(car: viewModel.cars[row])
   }
 }
@@ -55,6 +53,10 @@ extension SearchViewController: UISearchBarDelegate {
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(search), object: nil)
     self.perform(#selector(search), with: nil, afterDelay: 0.5)
+  }
+  
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    view.endEditing(true)
   }
 }
 

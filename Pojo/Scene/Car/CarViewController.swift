@@ -8,6 +8,10 @@
 import UIKit
 import Kingfisher
 
+protocol CarDisplayLogic: AnyObject {
+  func display(viewModel: CarViewModel)
+}
+
 final class CarViewController: UIViewController {
   @IBOutlet var imageView: UIImageView!
   @IBOutlet var subtitleLabel: UILabel!
@@ -17,10 +21,18 @@ final class CarViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    subtitleLabel.text = viewModel?.subtitle
-    titleLabel.text = viewModel?.title
-    bodyLabel.text = viewModel?.body
-    imageView.kf.setImage(with: viewModel?.imageURL, placeholder: UIImage(systemName: "car"))
+    if let viewModel = viewModel {
+      display(viewModel: viewModel)
+    }
+  }
+}
+
+extension CarViewController: CarDisplayLogic {
+  func display(viewModel: CarViewModel) {
+    subtitleLabel.text = viewModel.subtitle
+    titleLabel.text = viewModel.title
+    bodyLabel.text = viewModel.body
+    imageView.kf.setImage(with: viewModel.imageURL, placeholder: UIImage(systemName: "car"))
   }
 }
 
