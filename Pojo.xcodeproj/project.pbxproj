@@ -38,6 +38,7 @@
 		9D965B95267FC17500B73DAE /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B94267FC17500B73DAE /* UIView+Utils.swift */; };
 		9D965B97267FCBA300B73DAE /* CarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B96267FCBA300B73DAE /* CarInteractor.swift */; };
 		9D965B99267FCC7E00B73DAE /* CarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B98267FCC7E00B73DAE /* CarPresenter.swift */; };
+		9D965B9D268089DF00B73DAE /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B9C268089DF00B73DAE /* String+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		9D965B94267FC17500B73DAE /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		9D965B96267FCBA300B73DAE /* CarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInteractor.swift; sourceTree = "<group>"; };
 		9D965B98267FCC7E00B73DAE /* CarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPresenter.swift; sourceTree = "<group>"; };
+		9D965B9C268089DF00B73DAE /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 				9D4E1398267F7D5400665A5B /* UserDefaults+Settings.swift */,
 				9D965B8E267F97DA00B73DAE /* UIImage+Resize.swift */,
 				9D965B94267FC17500B73DAE /* UIView+Utils.swift */,
+				9D965B9C268089DF00B73DAE /* String+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				9D965B8D267F8E4700B73DAE /* AccountPresenter.swift in Sources */,
 				9D965B97267FCBA300B73DAE /* CarInteractor.swift in Sources */,
 				9D4E137E267C9C0500665A5B /* SearchInteractor.swift in Sources */,
+				9D965B9D268089DF00B73DAE /* String+Utils.swift in Sources */,
 				9D4E1341267BC73800665A5B /* SearchViewController.swift in Sources */,
 				9D4E138B267CB0FF00665A5B /* CarViewModel.swift in Sources */,
 				9D965B91267FB15300B73DAE /* User.swift in Sources */,

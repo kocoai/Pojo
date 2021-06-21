@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pojo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPC-uT-EqV">
-                                <rect key="frame" x="119" y="386" width="176.5" height="124.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="91"/>
+                                <rect key="frame" x="110" y="379.5" width="194" height="137"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="100"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -40,7 +40,7 @@
     </scenes>
     <resources>
         <namedColor name="AccentColor">
-            <color red="0.3353512287" green="0.46485221389999998" blue="0.94122731690000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.3872673512" green="0.4336325526" blue="0.89416605230000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

@@ -21,6 +21,7 @@ final class AccountViewController: UIViewController {
   @IBOutlet private var editButton: UIButton! {
     didSet { editButton.circle().shadow() }
   }
+  @IBOutlet private var scrollView: UIScrollView!
   
   private var interactor: AccountBusinessLogic!
   
@@ -29,7 +30,7 @@ final class AccountViewController: UIViewController {
       lastNameTextField.isEnabled = isEditMode
       firstNameTextField.isEnabled = isEditMode
       addressTextField.isEnabled = isEditMode
-      birthDatePicker.isEnabled = isEditMode
+      birthDatePicker.isUserInteractionEnabled = isEditMode
       photoImageView.isUserInteractionEnabled = isEditMode
       editButton.isSelected = !isEditMode
     }
@@ -56,10 +57,10 @@ final class AccountViewController: UIViewController {
     sender.isSelected = !sender.isSelected
     isEditMode = !sender.isSelected
     
-    if isEditMode  {
+    if isEditMode {
       lastNameTextField.becomeFirstResponder()
     } else {
-      let user = User(firstName: firstNameTextField.text, lastName: lastNameTextField.text, address: addressTextField.text, birthDate: birthDatePicker.date, photo: photoImageView.image)
+      let user = User(firstName: firstNameTextField.text?.trimmed, lastName: lastNameTextField.text?.trimmed, address: addressTextField.text?.trimmed, birthDate: birthDatePicker.date, photo: photoImageView.image)
       interactor.save(user: user)
     }
   }
@@ -143,8 +144,11 @@ extension AccountViewController {
         self.scrollViewMarginBottomConstraint.constant = 0
       } else {
         self.scrollViewMarginBottomConstraint.constant = keyboardViewEndFrame.height - self.view.safeAreaInsets.bottom
+        let bottomOffset = CGPoint(x: 0, y: self.scrollView.contentSize.height - self.view.bounds.height + keyboardViewEndFrame.height)
+
+        self.scrollView.setContentOffset(bottomOffset, animated: true)
       }
-      self.view.layoutSubviews()
+      self.view.layoutIfNeeded()
     }
   }
   
