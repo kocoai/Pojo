@@ -12,7 +12,7 @@
 		9D4E1344267BC73800665A5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4E1342267BC73800665A5B /* Main.storyboard */; };
 		9D4E1346267BC73A00665A5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4E1345267BC73A00665A5B /* Assets.xcassets */; };
 		9D4E1349267BC73A00665A5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4E1347267BC73A00665A5B /* LaunchScreen.storyboard */; };
-		9D4E1354267BC73A00665A5B /* PojoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E1353267BC73A00665A5B /* PojoTests.swift */; };
+		9D4E1354267BC73A00665A5B /* SearchInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E1353267BC73A00665A5B /* SearchInteractorTests.swift */; };
 		9D4E135F267BC73A00665A5B /* PojoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E135E267BC73A00665A5B /* PojoUITests.swift */; };
 		9D4E136D267BCB9800665A5B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E136C267BCB9800665A5B /* AccountViewController.swift */; };
 		9D4E1372267BCEAE00665A5B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4E1371267BCEAE00665A5B /* Repository.swift */; };
@@ -39,6 +39,10 @@
 		9D965B97267FCBA300B73DAE /* CarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B96267FCBA300B73DAE /* CarInteractor.swift */; };
 		9D965B99267FCC7E00B73DAE /* CarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B98267FCC7E00B73DAE /* CarPresenter.swift */; };
 		9D965B9D268089DF00B73DAE /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D965B9C268089DF00B73DAE /* String+Utils.swift */; };
+		9DA39EFA2680D5CE00F211A3 /* RemoteRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA39EF92680D5CE00F211A3 /* RemoteRepositoryMock.swift */; };
+		9DA39EFC2680D7C300F211A3 /* LocalRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA39EFB2680D7C300F211A3 /* LocalRepositoryMock.swift */; };
+		9DA39EFE2680D7D900F211A3 /* ErrorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA39EFD2680D7D900F211A3 /* ErrorMock.swift */; };
+		9DA39F022680DA2800F211A3 /* SearchPresentationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA39F012680DA2800F211A3 /* SearchPresentationMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +71,7 @@
 		9D4E1348267BC73A00665A5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D4E134A267BC73A00665A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D4E134F267BC73A00665A5B /* PojoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PojoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D4E1353267BC73A00665A5B /* PojoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PojoTests.swift; sourceTree = "<group>"; };
+		9D4E1353267BC73A00665A5B /* SearchInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorTests.swift; sourceTree = "<group>"; };
 		9D4E1355267BC73A00665A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D4E135A267BC73A00665A5B /* PojoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PojoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4E135E267BC73A00665A5B /* PojoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PojoUITests.swift; sourceTree = "<group>"; };
@@ -94,6 +98,10 @@
 		9D965B96267FCBA300B73DAE /* CarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInteractor.swift; sourceTree = "<group>"; };
 		9D965B98267FCC7E00B73DAE /* CarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPresenter.swift; sourceTree = "<group>"; };
 		9D965B9C268089DF00B73DAE /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		9DA39EF92680D5CE00F211A3 /* RemoteRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepositoryMock.swift; sourceTree = "<group>"; };
+		9DA39EFB2680D7C300F211A3 /* LocalRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepositoryMock.swift; sourceTree = "<group>"; };
+		9DA39EFD2680D7D900F211A3 /* ErrorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMock.swift; sourceTree = "<group>"; };
+		9DA39F012680DA2800F211A3 /* SearchPresentationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresentationMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +173,8 @@
 		9D4E1352267BC73A00665A5B /* PojoTests */ = {
 			isa = PBXGroup;
 			children = (
-				9D4E1353267BC73A00665A5B /* PojoTests.swift */,
+				9DA39EF82680D4D300F211A3 /* Mocks */,
+				9D4E1353267BC73A00665A5B /* SearchInteractorTests.swift */,
 				9D4E1355267BC73A00665A5B /* Info.plist */,
 			);
 			path = PojoTests;
@@ -269,6 +278,17 @@
 				9D4E138A267CB0FF00665A5B /* CarViewModel.swift */,
 			);
 			path = Car;
+			sourceTree = "<group>";
+		};
+		9DA39EF82680D4D300F211A3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9DA39EF92680D5CE00F211A3 /* RemoteRepositoryMock.swift */,
+				9DA39EFB2680D7C300F211A3 /* LocalRepositoryMock.swift */,
+				9DA39F012680DA2800F211A3 /* SearchPresentationMock.swift */,
+				9DA39EFD2680D7D900F211A3 /* ErrorMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,7 +461,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D4E1354267BC73A00665A5B /* PojoTests.swift in Sources */,
+				9D4E1354267BC73A00665A5B /* SearchInteractorTests.swift in Sources */,
+				9DA39EFA2680D5CE00F211A3 /* RemoteRepositoryMock.swift in Sources */,
+				9DA39F022680DA2800F211A3 /* SearchPresentationMock.swift in Sources */,
+				9DA39EFE2680D7D900F211A3 /* ErrorMock.swift in Sources */,
+				9DA39EFC2680D7C300F211A3 /* LocalRepositoryMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
