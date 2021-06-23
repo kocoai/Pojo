@@ -6,15 +6,14 @@ A simple Clean Swift demo app
 - POP (Protocol Oriented Programming)
 - Unit test with mock
 
-## Keys feature
+## Keys features
 - Instant search with highligted text
 - Offline mode
-- Stretchy image header
+- Stretchy image header (full autolayout)
 - Light & Dark mode
   
 
 ## Install
-
 Clone and run in Xcode :)
 
 ## Third party libraries
