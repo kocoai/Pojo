@@ -4,6 +4,7 @@ A simple Clean Swift demo app
 ## Architecture
 - Clean archi
 - POP (Protocol Oriented Programming)
+- Unit test with mock
 
 ## Keys feature
 - Instant search with highligted text
