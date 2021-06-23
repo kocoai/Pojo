@@ -1,8 +1,8 @@
 # Pojo
 A simple Clean Swift demo app
-![image](https://raw.githubusercontent.com/kocoai/Pojo/main/Screenshot/1.png)
-![image](https://raw.githubusercontent.com/kocoai/Pojo/main/Screenshot/2.png)
-![image](https://raw.githubusercontent.com/kocoai/Pojo/main/Screenshot/3.png)
+![image](https://raw.githubusercontent.com/kocoai/Pojo/main/Screenshot/1.png | width=200)
+![image](https://raw.githubusercontent.com/kocoai/Pojo/main/Screenshot/2.png | width=200)
+![image](https://raw.githubusercontent.com/kocoai/Pojo/main/Screenshot/3.png | width=200)
 
 ## Architecture
 - Clean archi
