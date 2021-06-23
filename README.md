@@ -9,6 +9,7 @@ A simple Clean Swift demo app
 ## Keys feature
 - Instant search with highligted text
 - Offline mode
+- Stretchy image header
 - Light & Dark mode
   
 
